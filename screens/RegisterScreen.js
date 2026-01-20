@@ -4,12 +4,14 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  
   Alert,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
   StyleSheet
 } from 'react-native';
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { AuthContext } from '../context/AuthContext';
 
@@ -17,6 +19,7 @@ export default function RegisterScreen({ navigation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
   const [loading, setLoading] = useState(false);
   const [focusedField, setFocusedField] = useState(null);
   const { register } = useContext(AuthContext);
