@@ -33,6 +33,7 @@ export default function HistoryScreen() {
 
   useEffect(() => {
     fetchHistory();
+    
   }, []);
 
   useEffect(() => {
