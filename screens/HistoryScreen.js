@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   Alert,
+  
   FlatList,
   ActivityIndicator,
   RefreshControl,
@@ -98,6 +99,7 @@ export default function HistoryScreen() {
         newSet.delete(imageId);
         return newSet;
       });
+      
     }
   };
 
