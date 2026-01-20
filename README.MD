@@ -256,3 +256,5 @@ It fully satisfies all academic project requirements and is prepared for live de
 # image-generator77
 # image-generator77
 # img-gen
+# img-gen
+# img-gen
