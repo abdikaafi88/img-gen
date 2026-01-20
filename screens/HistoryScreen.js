@@ -89,6 +89,7 @@ export default function HistoryScreen() {
       
       if (asset && asset.id) {
         Alert.alert('Success', 'Image saved to your gallery!');
+        
       } else {
         throw new Error('Failed to save image');
       }
