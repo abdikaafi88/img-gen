@@ -3,8 +3,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
+
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import { ImageProvider } from './context/ImageContext';
+
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ImageScreen from './screens/ImageScreen';
