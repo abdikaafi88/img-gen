@@ -7,10 +7,9 @@ import { ImageProvider } from './context/ImageContext';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ImageScreen from './screens/ImageScreen';
-import SearchScreen from './screens/SearchScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -29,13 +28,32 @@ function MainTabs() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#2563eb',
-        tabBarInactiveTintColor: '#6b7280',
+        tabBarActiveTintColor: '#3b82f6',
+        tabBarInactiveTintColor: '#9ca3af',
         tabBarStyle: {
-          paddingBottom: 5,
-          paddingTop: 5,
-          height: 60
-        }
+          backgroundColor: '#ffffff',
+          borderTopWidth: 1,
+          borderTopColor: '#e5e7eb',
+          paddingBottom: 8,
+          paddingTop: 8,
+          height: 70,
+          elevation: 10,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: -2,
+          },
+          shadowOpacity: 0.1,
+          shadowRadius: 4,
+        },
+        tabBarLabelStyle: {
+          fontSize: 14,
+          fontWeight: '600',
+          marginTop: 4,
+        },
+        tabBarIconStyle: {
+          marginTop: 4,
+        },
       }}
     >
       <Tab.Screen
@@ -43,15 +61,11 @@ function MainTabs() {
         component={ImageScreen}
         options={{
           tabBarLabel: 'Generate',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🎨</Text>
-        }}
-      />
-      <Tab.Screen
-        name="Search"
-        component={SearchScreen}
-        options={{
-          tabBarLabel: 'Search',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🔍</Text>
+          tabBarIcon: ({ color, focused }) => (
+            <Text style={{ color, fontSize: 24 }}>
+              🎨
+            </Text>
+          )
         }}
       />
       <Tab.Screen
@@ -59,7 +73,11 @@ function MainTabs() {
         component={HistoryScreen}
         options={{
           tabBarLabel: 'History',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>📚</Text>
+          tabBarIcon: ({ color, focused }) => (
+            <Text style={{ color, fontSize: 24 }}>
+              📚
+            </Text>
+          )
         }}
       />
     </Tab.Navigator>

@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 const getApiUrl = () => {
   if (__DEV__) {
     const IS_PHYSICAL_DEVICE = true;
-    const YOUR_COMPUTER_IP = '192.168.1.108';
+    const YOUR_COMPUTER_IP = '10.225.54.153';
     
     if (IS_PHYSICAL_DEVICE) {
       return `http://${YOUR_COMPUTER_IP}:5000/api`;
